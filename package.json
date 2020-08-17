@@ -1,0 +1,21 @@
+{
+	"name": "banned-forever",
+	"version": "1.0.0",
+	"description": "Check how many people are banned forever.",
+	"main": "dist/index.js",
+	"repository": "https://github.com/DKittenz/BannedForever",
+	"author": "DKittenz <kitten@kittenz.dev>",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"compile": "tsc",
+		"run": "node ./dist/index.js"
+	},
+	"dependencies": {
+		"node-fetch": "^2.6.0",
+		"typescript": "^3.9.7"
+	},
+	"devDependencies": {
+		"@types/node-fetch": "^2.5.7"
+	}
+}
