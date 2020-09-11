@@ -19,17 +19,16 @@ let main = async () => {
 				console.log(`User id ${index} [BANNED FOREVER]`);
 			} else if (response.status === 200) {
 				notBannedUsers++;
-				console.log(`User id ${index} [OK]`);
+				console.log(`User id ${index} [NOT BANNED]`);
 			}
 
 			resolve();
 		}));
 	}
 	
-	Promise.all(promises)
-		.then(() => {
-			console.log(`\nStart user id: ${startUserId}\nEnd user id: ${endUserId}\n\nBanned users: ${bannedUsers}\nNot banned users: ${notBannedUsers}\n(${(bannedUsers / notBannedUsers * notBannedUsers).toFixed(2)}% banned)`);
-		});
+	Promise.all(promises).then(() => {
+		console.log(`\nStart user id: ${startUserId}\nEnd user id: ${endUserId}\n\nBanned users: ${bannedUsers}\nNot banned users: ${notBannedUsers}\n(${(bannedUsers / notBannedUsers * notBannedUsers).toFixed(2)}% banned)`);
+	});
 }
 
 main();
